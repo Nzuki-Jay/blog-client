@@ -1,0 +1,35 @@
+@import '../../App.scss';
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .homeContent {
+        display: flex;
+        gap: 30px;
+
+        @include mdScreens() {
+            flex-direction: column;  
+        }
+
+        .blogs {
+            flex: 2;
+
+            @include mdScreens() {
+                flex: 1.5;
+            }
+        }
+    
+        .topics {
+            flex: 1;
+
+            @include mdScreens() {
+                flex: 1;
+            }
+        }
+
+    }
+
+}

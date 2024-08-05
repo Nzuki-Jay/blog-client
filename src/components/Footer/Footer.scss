@@ -1,0 +1,46 @@
+@import '../../App.scss';
+
+.footer {
+    margin: 20px 30px;
+    
+    .border {
+        border-top: 1px dotted rgb(196, 191, 191);
+        width: 100%;
+    }
+
+    .footerContent {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @include smScreens {
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .footerLinks {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+
+            @include smScreens {
+                flex-wrap: wrap;
+            }
+
+            li {
+                font-size: 15px;
+                font-weight: 200px;
+                cursor: pointer;
+
+                &:hover {
+                    font-weight: 500;
+                }
+            }
+
+            
+        }
+    }
+}

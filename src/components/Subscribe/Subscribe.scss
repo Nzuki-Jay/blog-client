@@ -1,0 +1,45 @@
+@import '../../App.scss';
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include mdScreens {
+        flex: 1;
+        gap: 25px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input, button {
+            width: 100%;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        input {
+            background-color: rgb(228, 217, 217);
+        }
+
+        button {
+            background-color: rgb(83, 93, 184);
+            cursor: pointer;
+            color: white;
+
+            &:hover {
+                background-color: rgb(56, 65, 143);
+            }
+        }
+    }
+}

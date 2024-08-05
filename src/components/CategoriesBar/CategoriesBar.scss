@@ -1,0 +1,38 @@
+@import '../../App.scss';
+
+.categoriesBar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+
+    @include mdScreens {
+        flex-direction: row;
+        gap: 30px;
+        border-bottom: 1px dotted rgb(175, 173, 173);
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+    }
+
+    @include smScreens {
+        flex-direction: column;
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .divider {
+        border: 1px dotted rgb(175, 173, 173);
+        margin: 20px 0;
+        width: 100%;
+
+        @include mdScreens {
+            
+            display: none;
+        }
+
+        @include smScreens {
+            display: block;
+        }
+    }
+}

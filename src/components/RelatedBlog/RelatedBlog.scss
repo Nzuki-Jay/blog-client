@@ -1,0 +1,70 @@
+.relatedBlog {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    box-shadow: 3px 4px 2px rgba($color: #000000, $alpha: 0.1);
+    border-radius: 5px;
+
+    img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .relatedBlogDetails {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        width: 100%;
+
+        small {
+            font-size: 14px;
+            color: rgb(172, 170, 170);
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .relatedBlogLinks {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            span,
+            .link {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 16px;
+                
+            }
+
+            .link {
+                color: rgb(118, 118, 197);
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                    color: rgb(97, 97, 175);
+                }
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                span {
+                    color: rgb(80, 79, 79);
+                }
+
+            }
+        }
+    }
+}

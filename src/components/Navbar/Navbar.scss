@@ -1,0 +1,98 @@
+@import '../../App.scss';
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    transition: all 300ms ease-in;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.08);
+    height: 70px;
+    margin-inline: 30px;
+    padding: 0 32px;
+
+    @include mdScreens {
+        margin-inline: 0;
+        position: sticky;
+        background-color: white;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-inline: 0;
+    }
+
+    .link {
+        text-decoration: none;
+        color: rgb(107, 107, 187);
+        font-weight: 600;
+
+        &:hover {
+            color: rgb(54, 54, 104);    
+        }  
+        
+        &.active{
+            color: rgb(54, 54, 104);
+        }
+    }
+
+    &.active {
+        position: sticky;
+        background-color: white;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-inline: 0;
+    }
+
+    .navLinks {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include mdScreens {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 20px;
+            width: 200px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 999;  
+            margin-top: 30px; 
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08); 
+
+            &.active {
+                display: flex;
+                animation: slideMenu 0.5s ease-out; 
+            }
+
+            @keyframes slideMenu {
+
+                from {
+                    transform: translateX(200px); 
+                } 
+                to {
+                    transform: translateX(0); 
+                }
+                
+            }
+            
+        }
+    }
+
+    .icon {
+        display: none;
+
+        @include mdScreens {
+            display: block;   
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 9999;   
+        }
+    }
+
+
+}
